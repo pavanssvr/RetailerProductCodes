@@ -12,7 +12,7 @@ namespace IRIProductCodes.Filters
         {
             HttpResponse response = context.HttpContext.Response;
             response.StatusCode = 500;
-            response.WriteAsync(context.Exception.InnerException.Message);
+            response.WriteAsync(context.Exception.Message);
 
             context.ExceptionHandled = true;
         }
